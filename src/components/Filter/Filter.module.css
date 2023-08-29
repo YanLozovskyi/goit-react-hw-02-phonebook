@@ -1,4 +1,4 @@
-label {
+.filterLabel {
   display: flex;
   justify-content: center;
 }

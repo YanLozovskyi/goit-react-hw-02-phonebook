@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Section from './Section';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
-import Filter from './Filter';
+import Filter from './Filter/Filter';
+import Notifications from './Notifications';
 
 class App extends Component {
   state = {
@@ -66,7 +67,9 @@ class App extends Component {
               onDelete={this.onButtonDeleteClick}
             />
           ) : (
-            <p>There are no contacts in your phonebook.</p>
+            <Notifications
+              message={'There are no contacts in your phonebook.'}
+            />
           )}
         </Section>
       </>

@@ -6,7 +6,7 @@ const filterId = nanoid();
 
 const Filter = ({ value, onChange }) => (
   <>
-    <label htmlFor={filterId}>
+    <label className={css.filterLabel} htmlFor={filterId}>
       <input
         className={css.filterInput}
         type="text"

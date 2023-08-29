@@ -5,6 +5,10 @@
   margin: 0 auto;
 }
 
+.formLabel {
+  display: flex;
+}
+
 .formInput {
   padding: 12px;
   margin-bottom: 20px;
@@ -24,7 +28,7 @@
 
 .submitButton {
   padding: 12px;
-  width: 428px;
+  width: 100%;
   background-color: #ff5959;
   color: #ffffff;
   border: none;
