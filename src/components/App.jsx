@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Form from './ContactForm';
+import Section from './Section';
+import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 
@@ -54,18 +55,20 @@ class App extends Component {
 
     return (
       <>
-        <h1>Phonebook</h1>
-        <Form onSubmit={this.addContact} />
-        <h2>Contacts</h2>
-        <Filter value={filter} onChange={this.onFilterChange} />
-        {contacts.length > 0 ? (
-          <ContactList
-            contacts={displayedContacts}
-            onDelete={this.onButtonDeleteClick}
-          />
-        ) : (
-          <p>There are no contacts in your phonebook.</p>
-        )}
+        <Section title={'Phonebook'}>
+          <ContactForm onSubmit={this.addContact} />
+        </Section>
+        <Section title="Contacts">
+          <Filter value={filter} onChange={this.onFilterChange} />
+          {contacts.length > 0 ? (
+            <ContactList
+              contacts={displayedContacts}
+              onDelete={this.onButtonDeleteClick}
+            />
+          ) : (
+            <p>There are no contacts in your phonebook.</p>
+          )}
+        </Section>
       </>
     );
   }

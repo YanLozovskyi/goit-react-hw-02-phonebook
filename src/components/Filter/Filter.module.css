@@ -1,0 +1,20 @@
+label {
+  display: flex;
+  justify-content: center;
+}
+
+.filterInput {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ff5959;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333333;
+  background-color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: #e04949;
+}
