@@ -1,4 +1,6 @@
-.contactItem {
+import styled from 'styled-components';
+
+export const ContactItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,9 +8,9 @@
   border-bottom: 2px solid #ff5959;
   color: #fff;
   font-size: 18px;
-}
+`;
 
-.deleteButton {
+export const DeleteButton = styled.button`
   padding: 8px 16px;
   background-color: #ff5959;
   color: #ffffff;
@@ -17,8 +19,8 @@
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-}
 
-.deleteButton:hover {
-  background-color: #e04949;
-}
+  &:hover {
+    background-color: #e04949;
+  }
+`;

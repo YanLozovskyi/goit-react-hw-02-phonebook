@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
+import { GlobalStyle } from './GlobalStyle';
+
 import Section from './Section';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
@@ -27,7 +30,7 @@ class App extends Component {
     }
 
     this.setState(prevState => ({
-      contacts: [...prevState.contacts, newContact],
+      contacts: [...prevState.contacts, { id: nanoid(), ...newContact }],
     }));
   };
 
@@ -57,7 +60,7 @@ class App extends Component {
     return (
       <>
         <Section title={'Phonebook'}>
-          <ContactForm onSubmit={this.addContact} />
+          <ContactForm onAdd={this.addContact} />
         </Section>
         <Section title="Contacts">
           <Filter value={filter} onChange={this.onFilterChange} />
@@ -72,6 +75,7 @@ class App extends Component {
             />
           )}
         </Section>
+        <GlobalStyle />
       </>
     );
   }
